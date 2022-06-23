@@ -8,11 +8,10 @@ class UserController {
   async check(req, res, next) {
     const { id } = req.query;
     if (!id) {
-      return next(ApiError.badRequest("no id u fucking fuck"));
-      return res.json({ message: "no id" });
+      return next(ApiError.badRequest("No ID"));
     }
-    // res.json(id);
-    res.json({ message: "tsetgs" });
+
+    res.json({ message: "Success" });
   }
 }
 
