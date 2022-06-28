@@ -4,7 +4,6 @@ module.exports = function (req, res, next) {
   if (req.method === "OPTIONS") {
     next();
   }
-
   try {
     const token = req.headers.authorization.split(" ")[1];
     if (!token) {
@@ -14,6 +13,6 @@ module.exports = function (req, res, next) {
     req.user = decoded;
     next();
   } catch (e) {
-    res.status(401).json({ message: "user unauthorized" });
+    res.status(401).json({ message: "user authorization issue" });
   }
 };
