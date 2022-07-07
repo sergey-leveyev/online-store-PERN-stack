@@ -38,7 +38,7 @@ const NavBar = observer(() => {
         ) : (
           <Button
             variant={"outline-light"}
-            onClick={() => user.setIsAuth(true)}
+           
           >
             Login
           </Button>
