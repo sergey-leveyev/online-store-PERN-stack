@@ -2,63 +2,9 @@ import { makeAutoObservable } from "mobx";
 
 export default class DeviceStore {
   constructor() {
-    this._types = [
-      { id: 1, name: "device1" },
-      { id: 2, name: "device2" },
-      { id: 3, name: "device3" },
-      { id: 4, name: "device4" },
-    ];
-    this._brands = [
-      { id: 1, name: "brand1" },
-      { id: 2, name: "brand2" },
-      { id: 3, name: "brand3" },
-      { id: 4, name: "brand4" },
-      { id: 5, name: "brand5" },
-    ];
-    this._devices = [
-      {
-        id: 1,
-        name: "iphone12",
-        price: 5000,
-        rating: 5,
-        img: "https://images.pexels.com/photos/699122/pexels-photo-699122.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      },
-      {
-        id: 2,
-        name: "iphone12",
-        price: 5000,
-        rating: 5,
-        img: "https://images.pexels.com/photos/699122/pexels-photo-699122.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      },
-      {
-        id: 3,
-        name: "iphone12",
-        price: 5000,
-        rating: 5,
-        img: "https://images.pexels.com/photos/699122/pexels-photo-699122.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      },
-      {
-        id: 4,
-        name: "iph2",
-        price: 5000,
-        rating: 5,
-        img: "https://images.pexels.com/photos/699122/pexels-photo-699122.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      },
-      {
-        id: 5,
-        name: "iphone12",
-        price: 5000,
-        rating: 5,
-        img: "https://images.pexels.com/photos/699122/pexels-photo-699122.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      },
-      {
-        id: 6,
-        name: "iphone12",
-        price: 5000,
-        rating: 5,
-        img: "https://images.pexels.com/photos/699122/pexels-photo-699122.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      },
-    ];
+    this._types = [];
+    this._brands = [];
+    this._devices = [];
     this._selectedType = {};
     this._selectedBrand = {};
     this._page = 1;

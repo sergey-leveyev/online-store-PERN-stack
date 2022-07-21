@@ -12,7 +12,14 @@ import { Context } from "../index";
 
 const NavBar = observer(() => {
   const { user } = useContext(Context);
+  console.log(user);
   const navigate = useNavigate();
+
+  const logOut = () => {
+    user.setUser({});
+    user.setIsAuth(false);
+    localStorage.removeItem("token");
+  };
 
   return (
     <Navbar bg="dark" variant="dark">
@@ -30,7 +37,7 @@ const NavBar = observer(() => {
             <Button
               variant={"outline-light"}
               className="mx-1"
-              onClick={() => navigate(LOGIN_ROUTE)}
+              onClick={() => logOut()}
             >
               Logout
             </Button>
@@ -38,7 +45,7 @@ const NavBar = observer(() => {
         ) : (
           <Button
             variant={"outline-light"}
-           
+            onClick={() => navigate(LOGIN_ROUTE)}
           >
             Login
           </Button>
