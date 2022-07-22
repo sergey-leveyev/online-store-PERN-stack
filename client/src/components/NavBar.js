@@ -12,7 +12,7 @@ import { Context } from "../index";
 
 const NavBar = observer(() => {
   const { user } = useContext(Context);
-  console.log(user);
+
   const navigate = useNavigate();
 
   const logOut = () => {

@@ -5,7 +5,7 @@ import { DEVICE_ROUTE } from "../utils/consts";
 
 const DeviceItem = ({ device }) => {
   const navigate = useNavigate();
-  //2:20:00
+  
   return (
     <Col
       md={3}
