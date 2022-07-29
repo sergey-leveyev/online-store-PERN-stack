@@ -6,7 +6,7 @@ const CreateDevice = ({ show, onHide }) => {
   const { device } = useContext(Context);
   const [info, setInfo] = useState([]);
 
-
+//test
   
   const addInfo = () => {
     setInfo([...info, { title: "", description: "", number: Date.now() }]);
